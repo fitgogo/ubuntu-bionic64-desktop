@@ -14,6 +14,7 @@
 
 1. git clone
 1. set up ssh key in playbook/roles/users/files/.ssh
+1. modify keyboard type at playbook/roles/xubuntu/vars/main.yml
 1. vagrant up
 1. after setup vagrant halt
 1. vagrant up again
