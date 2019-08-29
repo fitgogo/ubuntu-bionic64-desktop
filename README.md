@@ -35,6 +35,7 @@
 MIT License
 
 ## Authors
+fitgogo
 
 
 ## References
