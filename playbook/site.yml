@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - common
+    - docker
+    - git
+    - anyenv
+    - xubuntu
+    - ntp
+    - users
+    - gantsign.atom
+    - gantsign.visual-studio-code
+    - ulauncher
