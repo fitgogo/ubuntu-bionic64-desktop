@@ -1,8 +1,0 @@
----
-- name: add repository ulauncher
-  apt_repository: repo="ppa:agornostal/ulauncher"
-
-- name: install ulauncher
-  apt: >
-    name="ulauncher"
-    update_cache=yes
