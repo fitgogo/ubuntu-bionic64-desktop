@@ -22,7 +22,6 @@
 ### after first login
 
 * setup ibus
-* setup ulancher
 * anyenv install --init
    after install *env please reboot virtual machine
 
