@@ -10,7 +10,7 @@
     install_recommends: no
   environment:
     DEBIAN_FRONTEND: noninteractive
-  register: install_desktop
+  register: install_xserver
 
 - name: install fonts
   apt: 
@@ -21,30 +21,15 @@
     install_recommends: no
   environment:
     DEBIAN_FRONTEND: noninteractive
-  register: install_desktop
+  register: install_fonts
 
 - name: install xfce
   apt: 
     name: 
-    - xfwm4
-    - xfce4-panel
-    - xfce4-settings
-    - xfce4-session
-    - xfce4-terminal
-    - xfdesktop4
-    - xfce4-taskmanager
+    - xubuntu-desktop
+    - xfce4-goodies
     - lightdm
     - lightdm-gtk-greeter
-    - thunar
-    - gvfs
-    - gvfs-backends
-    - policykit-1
-    - udisks2
-    - gstreamer1.0-plugins-base
-    - gstreamer1.0-plugins-good
-    - gstreamer1.0-plugins-bad
-    - pulseaudio
-    - gstreamer1.0-pulseaudio
     - firefox
     - firefox-locale-en
     - firefox-locale-ja
