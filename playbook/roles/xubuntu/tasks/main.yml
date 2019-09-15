@@ -34,6 +34,9 @@
     - firefox-locale-en
     - firefox-locale-ja
     - plymouth-x11
+    - gimp
+    - inkscape
+    - libreoffice
     install_recommends: no
   environment:
     DEBIAN_FRONTEND: noninteractive
