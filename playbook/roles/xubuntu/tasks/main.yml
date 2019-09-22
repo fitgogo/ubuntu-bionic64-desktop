@@ -54,13 +54,3 @@
     - "greeter-hide-users=true"
     - "greeter-show-manual-login=true"
 
-- name: keyboard setting
-  lineinfile: >
-    dest="/etc/default/keyboard"
-    regexp="{{ item.regexp }}"
-    line="{{ item.line }}"
-  with_items:
-    - { regexp: "XKBMODEL=", line: 'XKBMODEL="{{ keyboardmodel }}"' }
-    - { regexp: "XKBLAYOUT=", line: 'XKBLAYOUT="{{ keyboardlayout }}"' }
-    - { regexp: "XKBVARIANT=", line: 'XKBVARIANT=""' }
-
