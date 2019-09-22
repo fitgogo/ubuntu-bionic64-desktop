@@ -28,6 +28,9 @@
     name: 
     - xubuntu-desktop
     - xfce4-goodies
+    - pavucontrol
+    - pulseaudio
+    - xfce4-pulseaudio-plugin
     - lightdm
     - lightdm-gtk-greeter
     - firefox
@@ -60,19 +63,4 @@
     - { regexp: "XKBMODEL=", line: 'XKBMODEL="{{ keyboardmodel }}"' }
     - { regexp: "XKBLAYOUT=", line: 'XKBLAYOUT="{{ keyboardlayout }}"' }
     - { regexp: "XKBVARIANT=", line: 'XKBVARIANT=""' }
-
-- name: grub setting
-  lineinfile: >
-    dest="/etc/default/grub.d/50-cloudimg-settings.cfg"
-    regexp="GRUB_CMDLINE_LINUX_DEFAULT.*"
-    line='GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"'
-  register: grub_config
-
-- name: update grub
-  command: update-grub
-  when: grub_config is changed
-
-- name: update initramfs
-  command: update-initramfs -u -k all
-  when: grub_config is changed
 

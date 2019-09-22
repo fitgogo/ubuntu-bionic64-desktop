@@ -1,6 +1,6 @@
 Vagrant.configure(2) do |config|
 
-    config.vm.box = "ubuntu/bionic64"
+    config.vm.box = "ubuntu_bionic64_18.04.03.01"
     config.vbguest.auto_update = true
     config.disksize.size = '64GB'
     config.vm.hostname = "bionic64"
@@ -10,23 +10,28 @@ Vagrant.configure(2) do |config|
     config.vm.provider "virtualbox" do |vb|
       vb.memory = 4096
       vb.cpus = 2
-      vb.name = "bionic64-desktop"
+      vb.name = "ubuntu_bionic64_18.04.03.01"
       vb.gui = true
       vb.customize [
-      "modifyvm", :id,
-      "--vram", "256",
-      "--clipboard", "bidirectional",
-      "--draganddrop", "bidirectional",
-      "--accelerate3d", "on",
-      "--hwvirtex", "on",
-      "--nestedpaging", "on",
-      "--largepages", "on",
-      "--ioapic", "on",
-      "--chipset", "ich9",
-      "--pae", "on",
-      "--paravirtprovider", "kvm",
-      "--natdnshostresolver1", "on",
-    ]
+        "modifyvm", :id,
+        "--vram", "256",
+        "--clipboard", "bidirectional",
+        "--draganddrop", "bidirectional",
+        "--accelerate3d", "on",
+        "--hwvirtex", "on",
+        "--nestedpaging", "on",
+        "--largepages", "on",
+        "--ioapic", "on",
+        "--chipset", "ich9",
+        "--pae", "on",
+        "--paravirtprovider", "kvm",
+        "--natdnshostresolver1", "on",
+      ]
+      vb.customize [
+        "storagectl", :id,
+        "--name", "SATA Controller",
+        "--hostiocache", "on",
+      ]
     end
 
     config.vm.provision "shell", privileged: false, inline: <<-SHELL
