@@ -46,3 +46,10 @@
     dest="/home/{{ users_username }}"
     src=".config"
     owner="{{ users_username }}"
+- name: add environment variables
+  blockinfile:
+      dest: "/home/{{ users_username }}/.bashrc"
+      block: |
+      if [ ! $GOPATH = "" ]; then
+        export PATH=$PATH:$GOPATH/bin
+      fi
