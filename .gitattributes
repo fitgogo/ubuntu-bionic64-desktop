@@ -2,3 +2,4 @@
 
 *.txt           text
 *.sh            text eol=lf
+playbook/*      text eol=lf
