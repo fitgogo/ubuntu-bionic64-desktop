@@ -36,6 +36,7 @@
     - firefox
     - firefox-locale-en
     - firefox-locale-ja
+    - Chromium
     - plymouth-x11
     - gimp
     - inkscape

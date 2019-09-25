@@ -35,6 +35,7 @@ Vagrant.configure(2) do |config|
     end
 
     config.vm.provision "shell", privileged: false, inline: <<-SHELL
+      sudo sed -i.bak -e "s%http://jp.archive.ubuntu.com/ubuntu/%http://ftp.jaist.ac.jp/pub/Linux/ubuntu/%g" /etc/apt/sources.list
       sudo apt-get update
       sudo apt-get install -y software-properties-common python python-apt aptitude
     SHELL

@@ -50,6 +50,7 @@
   blockinfile:
     dest: "/home/{{ users_username }}/.bashrc"
     block: |
-    if [ ! $GOPATH = "" ]; then
-      export PATH=$GOPATH/bin:$PATH
-    fi
+      if [ ! $GOPATH = "" ]; then
+        export PATH=$GOPATH/bin:$PATH
+      fi
+
