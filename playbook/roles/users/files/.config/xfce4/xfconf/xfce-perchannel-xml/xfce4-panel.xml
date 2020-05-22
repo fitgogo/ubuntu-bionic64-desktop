@@ -40,6 +40,7 @@
       <property name="size-max" type="uint" value="22"/>
       <property name="names-visible" type="array">
         <value type="string" value="ibus パネル"/>
+        <value type="string" value="タスクマネージャー"/>
         <value type="string" value="ibus-ui-gtk3"/>
         <value type="string" value="update-notifier"/>
       </property>
