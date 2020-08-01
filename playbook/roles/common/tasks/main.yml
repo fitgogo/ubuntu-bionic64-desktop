@@ -12,7 +12,17 @@
 
 - name: install language-pack
   apt: 
-    name: ['language-pack-ja', 'language-pack-gnome-ja', 'fonts-takao', 'ibus-mozc']
+    name:
+    - language-pack-ja
+    - language-pack-gnome-ja
+    - fonts-takao
+    - ibus-mozc
+    - zlib1g-dev
+    - libssl-dev
+    - libbz2-dev
+    - libreadline-dev
+    - libsqlite3-dev
+    - libffi-dev
   environment:
     DEBIAN_FRONTEND: "noninteractive"
   register: install_language_pack
