@@ -1,3 +1,5 @@
 ---
-keyboardmodel: "jp106"
-keyboardlayout: "jp"
+keyboardmodel: "us101"
+keyboardlayout: "us"
+# keyboardmodel: "jp106"
+# keyboardlayout: "jp"
